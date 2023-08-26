@@ -57,6 +57,14 @@ button.addEventListener("click", () => {
     } else {
       minuteStr = "минут"
     }
+    if (hour === 0) {
+      hourStr = ""
+      hour = ""
+    }
+    if (minute === 0) {
+      minuteStr = ""
+      minute = ""
+    }
     res.innerHTML = `Прошло времени: <br> ${hour} ${hourStr} ${minute} ${minuteStr}`
   }
 })
