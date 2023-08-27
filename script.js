@@ -14,14 +14,14 @@ form.addEventListener("submit", (e) => {
 
 button.addEventListener("click", () => {
   if (
-    begHourInput.value < 1 ||
-    endHourInput.value < 1 ||
-    endHourInput.value > 24 ||
-    begHourInput.value > 24 ||
+    begHourInput.value < 0 ||
+    endHourInput.value < 0 ||
+    endHourInput.value > 23 ||
+    begHourInput.value > 23 ||
     begMinuteInput.value < 0 ||
     endMinuteInput.value < 0 ||
-    endMinuteInput.value > 60 ||
-    begMinuteInput.value > 60
+    endMinuteInput.value > 59 ||
+    begMinuteInput.value > 59
   ) {
     res.textContent = `Введите корректные данные`
   } else {
